@@ -3,4 +3,4 @@ test
 
 This is my test repository
 
-<ol><li>value of changeColorBasedOn specified in eventSources</li><li>value of changeColorBasedOn specified in Plugin Settings</li><li>\"Event\"</li></ol>
+<ol><li>Option1</li><li>Option2</li><li>Option3</li></ol>
