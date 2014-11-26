@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<title>Date Picker</title>
+	
+		<link rel="stylesheet" type="text/css" href="DateTimePicker.min.css" />
+		
+		<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="DateTimePicker.min.js"></script>
+		
+		<style>
+		
+			p
+			{
+				margin-left: 20px;
+			}
+		
+			input
+			{
+				width: 200px;
+				padding: 10px;
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+		
+			.pickerButton
+			{
+				background: #A3A3CC;
+				color: #FFFFFF;
+				border-radius: 2px;
+				padding: 10px 20px;
+			
+				cursor: pointer;
+			}
+		
+			.pickerButton:hover
+			{
+				background: #CCA3A3;
+			}
+		
+		</style>
+	
+	</head>
+	
+	<body>
+	
+		<div class="container">
+		
+			<div id="datePicker">
+				<p>Date : </p>
+				<input type="text" data-field="date" readonly>
+				<span class="pickerButton">Show</span>
+			</div>
+		
+			<div id="timePicker">
+				<p>Time : </p>
+				<input type="text" data-field="time" readonly>
+				<span class="pickerButton">Show</span>
+			</div>
+		
+			<div id="dateTimePicker">
+				<p>DateTime : </p>
+				<input type="text" data-field="datetime" readonly>
+				<span class="pickerButton">Show</span>
+			</div>
+		
+		</div>
+		
+		<div id="dtBox"></div>
+		
+		<script type="text/javascript">
+		
+			$(document).ready(function()
+			{
+				$("#dtBox").DateTimePicker({
+				
+					addEventHandlers: function()
+					{
+						var dtPickerObj = this;
+					
+						$("input").attr("disabled", "disabled");
+					
+						$("#datePicker .pickerButton").click(function(e)
+						{
+							e.stopPropagation();
+							dtPickerObj.showDateTimePicker($("#datePicker input"));
+						});
+					
+						$("#timePicker .pickerButton").click(function(e)
+						{
+							e.stopPropagation();
+							dtPickerObj.showDateTimePicker($("#timePicker input"));
+						});
+					
+						$("#dateTimePicker .pickerButton").click(function(e)
+						{
+							e.stopPropagation();
+							dtPickerObj.showDateTimePicker($("#dateTimePicker input"));
+						});
+					}
+				});
+			});
+		
+		</script>
+	
+	</body>
+
+</html>
