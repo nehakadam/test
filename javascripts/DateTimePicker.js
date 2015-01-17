@@ -301,8 +301,8 @@
 		
 			_inputFieldFocus: function(e)
 			{
-				$(dtPickerObj.dataObject.oInputElement).blur();
 				var dtPickerObj = e.data.obj;
+				$(dtPickerObj.dataObject.oInputElement).blur();
 			
 				if(dtPickerObj.dataObject.oInputElement == null)
 				{
