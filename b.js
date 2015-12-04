@@ -1,6 +1,6 @@
 {
   
-  "mfs": ["dist/datetimepicker.js", "dist/datetimepicker.css"],
+  "mfs": ["dist/DateTimePicker.js", "dist/DateTimePicker.css"],
  
   
 }
